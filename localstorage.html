@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>localStorage</h1>
+		<script>
+			var bd = "carlos";
+			//insertar dato en localStorage
+			localStorage.setItem("nombre", bd);
+			//console.log(localStorage);
+
+			//Leer de localStorage
+			var ls = localStorage.getItem("nombre");
+			//console.log(ls);
+			//confirm("Quieres borrar el dato?");
+
+			//Borrar un dato de localStorage
+			localStorage.removeItem("nombre");
+			//console.log(localStorage);
+
+			//borrar todos los datos de localStorage
+			localStorage.clear();
+			// console.log(localStorage);
+
+			//GUARDAR JSON
+
+			baseDatos = [
+				{
+					nombre: "pepe",
+					apellido: "Lillos",
+				},
+				{
+					nombre: "Paco",
+					apellido: "Mecocos",
+				}
+			];
+			//Convertir un objeto json en un texto
+			baseDatosTexto = JSON.stringify(baseDatos);
+			console.log('Base de datos como objeto ' + baseDatos);
+			console.log('Base de datos como string ' + baseDatosTexto);
+			// Metemos el objeto baseDatosString en localstorage
+            localStorage.setItem("datos", baseDatosTexto);
+			console.log(localStorage);
+
+            //Leer la baseDatosTexto
+            baseDatosTexto = localStorage.getItem('datos')
+            console.log(baseDatosTexto);
+
+            //Convertir TEXTO EN OBJETO JSON
+            baseDatos = JSON.parse(baseDatosTexto)
+            console.log(baseDatos);
+
+
+
+
+		</script>
+	</body>
+</html>
