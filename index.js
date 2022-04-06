@@ -153,8 +153,8 @@ myModal.addEventListener('click', (e)=>{
     
         BDO[index].titulo =  document.querySelector('#modal-titulo').value
         
-        BDO[index].fecha= girarFecha(document.querySelector        
-        ('#modal-fecha').value)
+        BDO[index].fecha= document.querySelector        
+        ('#modal-fecha').value
 
         BDO[index].hora = document.querySelector('#modal-hora').value = '00:00'
         
