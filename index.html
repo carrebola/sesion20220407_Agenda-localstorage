@@ -16,29 +16,24 @@
 			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 			crossorigin="anonymous"
 		/>
+		<!-- Iconos de fontawesome -->
 		<script
 			src="https://kit.fontawesome.com/1a68c76c8b.js"
 			crossorigin="anonymous"
 		></script>
 	</head>
 	<body>
-		<!-- modal para modificar -->
 		
-
-		<!-- Button trigger modal -->
-
-  
-  <!-- Modal -->
+  <!-- Modal para modificar las entradas -->
   <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered">
 	  <div class="modal-content">
 		<div class="modal-header">
-		  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+		  <h5 class="modal-title" id="exampleModalLabel">Modificar entrada</h5>
 		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 		</div>
 		<div class="modal-body">
-			<form action="">
-							
+			<form action="">			
 				<div class="mb-2">
 					<label for="titulo" class="form-label">Evento</label>
 					<!-- titulo -->
@@ -88,76 +83,80 @@
 	</div>
   </div>
 
-
+		<!-- Contenedor principal -->
 		<div class="container-fluid">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
 						<h1 class="col-12 m-2 text-center">Agenda</h1>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-12">
+				</div>.
+				<div class="row">	
+					<div class="col-12 col-md-6">
 						<form action="">
+							<div class="card card-body mb-2">
+								<div class="mb-2">
+									<label for="titulo" class="form-label">Evento</label>
+									<!-- titulo -->
+									<textarea
+										id="titulo"
+										class="form-control"
+										name="titulo"
+										rows="2"
+									></textarea>
+								</div>
 							
-							<div class="mb-2">
-								<label for="titulo" class="form-label">Evento</label>
-								<!-- titulo -->
-								<textarea
-									id="titulo"
-									class="form-control"
-									name="titulo"
-									rows="2"
-								></textarea>
-							</div>
-							
-							
-							<div class="mb-2">
-								<label for="fecha" class="form-label">Fecha</label>
-								<!-- titulo -->
-								<input
-									type="date"
-									value=""
-									id="fecha"
-									class="form-control"
-									name="fecha"
-								></input>
-							</div>
 								
-							<div class="mb-3">
-								<label for="hora" class="form-label">Hora</label>
-								<!-- titulo -->
-								<input
-									type="time"
-									value=""
-									id="hora"
-									class="form-control"
-									name="hora"
-								></input>
+									<div class="mb-2">
+										<label for="fecha" class="form-label">Fecha</label>
+										<!-- titulo -->
+										<input
+											type="date"
+											value=""
+											id="fecha"
+											class="form-control"
+											name="fecha"
+										></input>
+									</div>
+								
+									
+									<div class="mb-3">
+										<label for="hora" class="form-label">Hora</label>
+										<!-- titulo -->
+										<input
+											type="time"
+											value=""
+											id="hora"
+											class="form-control"
+											name="hora"
+										></input>
+									</div>
+							
+								<div class="col-">
+									<div class="d-grid gap-2 d-block mb-2">
+										<button class="btn btn-primary" type="button" id="addTarea">
+											Añadir Evento
+										</button>
+									</div>
+								</div>
+								
+									<div class="d-grid gap-2 d-block">
+										<button class="btn btn-danger" type="button" id="borrarTodo">
+											Borrar todo
+										</button>
+									</div>
+								
 							</div>
-						
-
-							<div class="d-grid gap-2 d-md-block">
-								<button class="btn btn-primary" type="button" id="addTarea">
-									Añadir Evento
-								</button>
-							</div>
-							<div class="d-grid gap-2 d-md-block mt-2">
-								<button class="btn btn-danger" type="button" id="borrarTodo">
-									Borrar todo
-								</button>
-							</div>
-						</form>
+						</form>		
 					</div>
-				</div>
-				<div class="row">
-					<hr class="mt-3">
-					<h2 class="text-center ">Tareas</h2>
-					<div id="lista" class="col-12"></div>
+					<div class="col-12 col-md-6">
+						<div class="card card-body" id= "lista">
+
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- Bootstrap JavaScript Libraries -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
